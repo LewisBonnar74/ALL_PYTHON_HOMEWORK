@@ -13,4 +13,11 @@ def personal_top_three(scores):
 def high_to_low(scores):
     scores.sort(reverse = True)
     return scores
-     
+    
+def top_three_when_there_is_a_tie(scores):
+    scores.sort(reverse = True)
+    
+    for score in scores:
+        if score == score:
+            scores.remove(score)
+    return scores[0:3]

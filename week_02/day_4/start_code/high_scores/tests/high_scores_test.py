@@ -1,6 +1,6 @@
 import unittest
 
-from src.high_scores import high_to_low, latest, personal_best, personal_top_three
+from src.high_scores import high_to_low, latest, personal_best, personal_top_three, top_three_when_there_is_a_tie
 
 
 class HighScoresTest(unittest.TestCase):
@@ -17,7 +17,8 @@ class HighScoresTest(unittest.TestCase):
     def test_high_to_low(self):
         self.assertEqual([5, 4, 3, 2, 1], high_to_low([1, 2, 3, 4, 5]))
 
-    # Test top three when there is a tie
+    def test_top_three_when_there_is_a_tie(self):
+        self.assertEqual([5, 4, 3], top_three_when_there_is_a_tie([1, 2, 3, 4, 5, 5]))
 
     # Test top three when there are less than three
 
