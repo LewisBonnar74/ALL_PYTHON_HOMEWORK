@@ -8,7 +8,8 @@ class HighScoresTest(unittest.TestCase):
     def test_latest_score(self):
         self.assertEqual(100, latest([50, 55, 65, 100]))
 
-    
+    def test_personal_best(self):
+        self.assertEqual(500, personal_best([100, 200, 300, 500]))
 
     # Test top three from list of scores
 
