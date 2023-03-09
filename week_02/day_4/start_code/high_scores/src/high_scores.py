@@ -9,3 +9,8 @@ def personal_best(scores):
 def personal_top_three(scores):
     scores.sort(reverse = True)
     return scores[0:3]
+
+def high_to_low(scores):
+    scores.sort(reverse = True)
+    return scores
+     
